@@ -49,7 +49,6 @@ def main():
         posts, res_dict, finish = get_responses(timestamp)
         not_posts = [post for post in posts if post['type']!='post']
         if len(not_posts) > 0:
-            print(not_posts)
             posts = [post for post in posts if post not in not_posts]
         results.extend(posts)
 
